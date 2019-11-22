@@ -1,0 +1,109 @@
+@media only screen and (max-width: 600px) {
+    #main {
+        margin-left: 0
+    }
+}
+
+@media (max-width: 600px) {
+    #container{
+        margin-right: 40px;
+    }
+    
+    #sidebar{
+        width: 0px;
+    }
+
+    #sideminibar{
+        width: 40px;
+    }
+    
+    #footer{
+        font-size: 12px;
+    }
+    
+    #burger, #to-top, #to-logout{
+        right : 0px;
+    }
+    
+    #burger{
+        display: block;
+    }
+
+    input:checked ~ #sidebar { 
+        width: 200px;
+    }
+
+    input:checked ~ #sideminibar { 
+        width: 240px;
+    }
+
+    input:checked ~ #to-top {
+        right: 200px;
+    }
+
+    input:checked ~ #to-logout {
+        right: 200px;
+    }
+
+    input:checked ~ #burger {
+        right: 200px;
+    }
+    
+    #inputText{
+        width: 100%;
+    }
+    
+    #paging {
+        width: 100%;
+        margin-left: 0px;
+        float: none;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    #paging a {
+        padding: 2px 4px 2px 4px;
+        margin:0px 3px 0px 3px;
+        background:#14293D;
+        color:#ECF0F1;
+        text-decoration: none;
+    }
+    
+    #totalPage {
+        margin-top: 10px;
+        margin-right: 0px;
+        float: none;
+        text-align: center;
+    }
+    
+    #noa-content{
+        padding: 10px;
+        margin: 0px;
+    }
+
+    #error{
+        width: 100%;
+    }
+
+    #flashMessage{
+        opacity: 0.8;
+        font-size: 30px;
+        line-height: 100px;
+        bottom: 10px;
+        width: 100%;
+        height: 100px;
+        right: 10px;
+    }
+}
+
+@media  (max-width: 600px) {
+  .hide-small {    
+    display: none !important;
+  }
+}
+
+@media (max-width:992px) and (min-width:601px){
+    .hide-medium{
+        display:none!important
+    }
+}

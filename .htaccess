@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+# force http:// for selected URLs
+RewriteCond %{HTTPS} on
+RewriteCond %{THE_REQUEST} /ins/ [NC]
+RewriteRule ^ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteRule ^ins/([0-9]+)/([0-9-.]+)/([0-9-.]+)/([0-9-.]+)/([0-9-.]+)/([0-9-.]+)/([0-9-.]+)/([0-9-.]+)/?$ index.php?controller=api&action=ins&id=$1&latKal=$2&lngKal=$3&latRaw=$4&lngRaw=$5&tipe=$6&imuRaw=$7&imuKal=$8 [NC]
+RewriteRule ^logout?$ logout.php [NC]
+RewriteRule ^([a-zA-Z]*)/?([a-zA-Z]*)?/?([^/.]*)?/?$ index.php?controller=$1&action=$2&id=$3 [NC,L]
